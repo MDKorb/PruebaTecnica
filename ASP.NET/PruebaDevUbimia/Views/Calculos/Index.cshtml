@@ -1,0 +1,52 @@
+﻿
+<h2 class="titulo">Calcular factorial</h2>
+
+<div class="factorial">
+
+<form method="post" action="/Calculos/Calcular" >
+
+    <input type="number" name="numero" required />
+
+    <button type="submit">Calcular</button>
+
+</form>
+
+@if (ViewBag.Resultado != null)
+{
+    <p class="resultado">Resultado: @ViewBag.Resultado</p>
+}
+
+@if (ViewBag.Error != null)
+{
+    <p class="error" style="color:red">@ViewBag.Error</p>
+}
+
+
+</div>
+<hr />
+
+<h2 class="titulo">Ordenar números</h2>
+
+<form method="post" action="/Calculos/Ordenar">
+
+    <input type="number" name="n1" required />
+    <input type="number" name="n2" required />
+    <input type="number" name="n3" required />
+    <input type="number" name="n4" required />
+    <input type="number" name="n5" required />
+
+    <button type="submit">Ordenar</button>
+
+</form>
+
+@if (ViewBag.NumerosOrdenados != null)
+{
+    <p class="resultado">Números ordenados:</p>
+
+    <ul>
+        @foreach (var n in ViewBag.NumerosOrdenados)
+        {
+            <li>@n</li>
+        }
+    </ul>
+}
