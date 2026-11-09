@@ -1,4 +1,4 @@
-# Ubimia-PruebaTecnica
+# PruebaTecnica
 Este repositorio contiene la solución de la prueba técnica dividida en dos partes:
 
 - Aplicación ASP.NET
